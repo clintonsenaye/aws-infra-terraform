@@ -12,7 +12,7 @@ This project provisions a secure, auto-scaling AWS infrastructure using Terrafor
 - IAM roles and policies
 - Auto-scaling group and Launch Template
 
-![Architecture Diagram]()
+![Architecture Diagram](Screenshot 2025-05-06 at 3.26.20 AM.png)
 
 ## Tech Stack
 
