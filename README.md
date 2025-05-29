@@ -4,7 +4,7 @@
 This project provisions a secure, auto-scaling, and production-ready AWS infrastructure using Terraform. It is designed to be modular, reusable, and easy to manage, following best practices similar to those used by DevOps teams at Amazon. The infrastructure supports scalable web applications, automated monitoring, and stress testing for performance validation.
 
 ## Architecture Diagram & Data Flow
-![Architecture Diagram](https://github.com/user-attachments/assets/8eaf2dfb-79d8-4236-b8e0-605100b0f7c3)
+![Architecture Diagram](https://github.com/user-attachments/assets/702c85f5-ac3f-4625-8f6c-524fb54874be)
 
 **Data Flow Explanation:**
 - Users access the application via the Application Load Balancer (ALB).
