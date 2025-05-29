@@ -258,3 +258,31 @@ resource "aws_lb_listener" "web_listener" {
     target_group_arn = aws_lb_target_group.web_target_group.arn
   }
 }
+
+resource "aws_sns_topic" "cpu_alerts" {
+  name = "cpu-alerts-topic"
+}
+
+resource "aws_sns_topic_subscription" "email_alert" {
+  topic_arn = aws_sns_topic.cpu_alerts.arn
+  protocol  = "email"
+  endpoint  = "clintonsenaye@gmail.com"  
+}
+
+resource "aws_cloudwatch_metric_alarm" "high_cpu_alarm" {
+  alarm_name          = "HighCPUAlarm"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 2
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/EC2"
+  period              = 120
+  statistic           = "Average"
+  threshold           = 70
+  alarm_description   = "Alarm when CPU exceeds 70%"
+  dimensions = {
+    AutoScalingGroupName = aws_autoscaling_group.web_asg.name
+  }
+
+  alarm_actions = [aws_sns_topic.cpu_alerts.arn]
+}
+

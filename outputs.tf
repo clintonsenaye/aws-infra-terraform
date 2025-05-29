@@ -21,3 +21,7 @@ output "s3_bucket_name" {
 output "load_balancer_dns" {
   value = aws_lb.web_alb.dns_name
 }
+
+output "sns_topic_arn" {
+  value = aws_sns_topic.cpu_alerts.arn
+}
