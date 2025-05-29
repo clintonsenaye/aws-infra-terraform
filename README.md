@@ -31,7 +31,7 @@ This project provisions a secure, auto-scaling, and production-ready AWS infrast
 ## How to Deploy
 1. **Clone the repository:**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/clintonsenaye/aws-infra-terraform.git 
    cd aws-infra-terraform
    ```
 2. **Configure AWS credentials:**
