@@ -1,0 +1,10 @@
+variable "sg_name" {}
+variable "sg_description" {}
+variable "vpc_id" {}
+variable "s3_bucket_name" {}
+variable "key_name" {}
+variable "ami" {}
+variable "instance_type" {}
+variable "public_subnet_id" {}
+variable "iam_instance_profile" {}
+variable "instance_name" {} 
